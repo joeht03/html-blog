@@ -150,3 +150,14 @@ footer {
         flex: 1 1 100%;
     }
 }
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 8px;
+}
