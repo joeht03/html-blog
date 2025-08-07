@@ -104,19 +104,19 @@
 
                 <section id="week5">
 					<div class="project-section">
+					<h3>Week 5:*Side work + collecting scan data*</h3>
 						<div class="text-content">
-							<h3>Week 5:*Side work + collecting scan data*</h3>
 							<p>While continuing to work on my app, my supervisor asked me to look into some maths behind the sampling frequency of waveform pulses emitted. I started to look into how much you could reduce the sampling frequency, currently around 4 pulses per second, and still obtain the same characteristic data seen in the early moments of a scan where changes happen in the skin due to undergoing compression now in contact with the probe quartz window.</p>
 							<p>I compared the data produced at different sampling frequencies, determined the errors introduced by less frequent pulses and trialed interpolation methods to try and preserve/recover as much data as possible.</p>
 							<p>My colleague Agrima asked me to assist her on some research into a similarly inclined project - taking images at lower resolutions to then see if they can be artifically upscaled. Lower resolution scans take far less time to complete as less total points are measured to then be interpolated into an image grid. Less points going into a 100*100 grid, as I previously discussed, mean that more inaccuracies will be introduced by the interpolation process to fill out the grid points. We took scans of a credit card chip and a hand scar at 2 different resolutions to then contrast and compare the image produced to see if key information was preserved or could be recovered from the lower resolution image.</p>
 							<p>My own investigation into this struggled to get the same information out of both resolution images eg. determining the length of the hand scar was possible from the higher resolution image but not from the lower resolution image. However, the images of the credit card chip proved more promising, likely due to the large contrasts in material from metal to plastic as opposed to skin and new scar tissue.</p>
 							<p>I started to analyse some old scan data taken at varying points across the body - forehead, cheek, finger and volar forearm. My goal is to build up my own small database of scans to complement these pre-existing scans and then try to establish some relationships in the data.
+							<div class="image-container">
+								<img src="creditcard_im.png" alt="An image processed by my app of a credit card chip">
+							</div>
 						</div>
 					</div>
-					<div class="image-container">
-							<img src="creditcard_im.png" alt="An image processed by my app of a credit card chip">
-					</div>
-			  </section>
+				</section>
 
                 <section id="week6">
                     <h3>Week 6: *Collecting sample scans*</h3>
