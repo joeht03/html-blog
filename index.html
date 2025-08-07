@@ -83,7 +83,7 @@
 				<section id="week2">
                     <h3>Week 2: Image Reconstruction, Acquisition and Analysis </h3>
                     <p>This week, I started to work on code for generating 2D images. This involved a lot of scaling up my code for 1D analysis to iterate the process for approximately 2700 total points! These ~2700 point scans across the quartz window are interpolated to fill an 100*100 grid image with dimensions approximately 22*22mm (the quartz window is a 22mm diametre circle, so some post-interpolation processing is required).</p>
-					<p>I produced images depicting the FFT maximum amplitude (the FFT of the quartz-sample boundary reflection), the reflection peak-to-peak, the phase and the refractive index of the sample. From these, I was able to determine these such characteristic properties of samples like water and skin of the volar forearm.</p>
+					<p>I produced images depicting the FFT maximum amplitude (the FFT of the quartz-sample boundary reflection), the reflection peak-to-peak, the phase and the refractive index of the sample. From these, I was able to determine these such characteristic properties of samples such as water and skin of the volar forearm.</p>
 					<p>I was able to assist a colleague with some of his research into impedence matching, allowing him to take some images of my volar forearm with a thin layer of paraffin gel applied - like how ultrasounds require the use of a gel to eliminate too-great difference in acoustic impedence between skin and air, the paraffin is intended to harmlessly fill in the air gaps in the top layer of skin.</p>
                 </section>
 
@@ -103,19 +103,25 @@
 				</section>
 
                 <section id="week5">
-                    <h3>Week 5:*Side work + collecting scan data*</h3>
-                    <p>While continuing to work on my app, my supervisor asked me to look into some maths behind the sampling frequency of waveform pulses emitted. I started to look into how much you could reduce the sampling frequency, currently around 4 pulses per second, and still obtain the same characteristic data seen in the early moments of a scan where changes happen in the skin due to undergoing compression now in contact with the probe quartz window.</p>
-					<p>I compared the data produced at different sampling frequencies, determined the errors introduced by less frequent pulses and trialed interpolation methods to try and preserve/recover as much data as possible.</p>
-					<p>My colleague Agrima asked me to assist her on some research into a similarly inclined project - taking images at lower resolutions to then see if they can be artifically upscaled. Lower resolution scans take far less time to complete as less total points are measured to then be interpolated into an image grid. Less points going into a 100*100 grid, as I previously discussed, mean that more inaccuracies will be introduced by the interpolation process to fill out the grid points. We took scans of a credit card chip and a hand scar at 2 different resolutions to then contrast and compare the image produced to see if key information was preserved or could be recovered from the lower resolution image.</p>
-					<p>My own investigation into this struggled to get the same information out of both resolution images eg. determining the length of the hand scar was possible from the higher resolution image but not from the lower resolution image. However, the images of the credit card chip proved more promising, likely due to the large contrasts in material from metal to plastic as opposed to skin and new scar tissue.</p>
-					<p>I started to analyse some old scan data taken at varying points across the body - forehead, cheek, finger and volar forearm. My goal is to build up my own small database of scans to complement these pre-existing scans and then try to establish some relationships in the data.
-                </section>
+					<div class="project-section">
+						<div class="text-content">
+							<h3>Week 5:*Side work + collecting scan data*</h3>
+							<p>While continuing to work on my app, my supervisor asked me to look into some maths behind the sampling frequency of waveform pulses emitted. I started to look into how much you could reduce the sampling frequency, currently around 4 pulses per second, and still obtain the same characteristic data seen in the early moments of a scan where changes happen in the skin due to undergoing compression now in contact with the probe quartz window.</p>
+							<p>I compared the data produced at different sampling frequencies, determined the errors introduced by less frequent pulses and trialed interpolation methods to try and preserve/recover as much data as possible.</p>
+							<p>My colleague Agrima asked me to assist her on some research into a similarly inclined project - taking images at lower resolutions to then see if they can be artifically upscaled. Lower resolution scans take far less time to complete as less total points are measured to then be interpolated into an image grid. Less points going into a 100*100 grid, as I previously discussed, mean that more inaccuracies will be introduced by the interpolation process to fill out the grid points. We took scans of a credit card chip and a hand scar at 2 different resolutions to then contrast and compare the image produced to see if key information was preserved or could be recovered from the lower resolution image.</p>
+							<p>My own investigation into this struggled to get the same information out of both resolution images eg. determining the length of the hand scar was possible from the higher resolution image but not from the lower resolution image. However, the images of the credit card chip proved more promising, likely due to the large contrasts in material from metal to plastic as opposed to skin and new scar tissue.</p>
+							<p>I started to analyse some old scan data taken at varying points across the body - forehead, cheek, finger and volar forearm. My goal is to build up my own small database of scans to complement these pre-existing scans and then try to establish some relationships in the data.
+						</div>
+						<div class="image-container">
+							<img src="creditcard.png" alt="A screenshot from my app ~ an image generated from a 2D scan of a credit card chip">
+						</div>
+				</div>
+			  </section>
 
                 <section id="week6">
                     <h3>Week 6: *Collecting sample scans*</h3>
                     <p>I started to collect some scans of myself and Ben. We took the scans at 2 resolutions so that the data could also be useful for that project too.</p>
-					<p>
-					This week...collecting some scans of skin regions + Agrima resolution work</p>
+					<p>This week, I had to move my belongings out of my uni student house as we were at the end of our contract. This kept me quite busy, cleaning and packing and driving, and meant I didn't complete too much work in the second half of the week. Mostly just some minor bug fixes for my app and some work towards the sample frequency investigation. </p>
                 </section>
 
                 <section id="week7">
