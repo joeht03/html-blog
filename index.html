@@ -35,7 +35,8 @@
 						<h2>About the Project:</h2>
 						<p>Hi! I'm Joseph, a Mathematics and Physics undergraduate at the University of Warwick. I am very passionate about the field of Medical Physics and am very lucky to have landed an Undergraduate Research Support Scheme (URSS) project researching and experimenting with an up-and-coming medical imaging technique!</p> 
 						<p>This summer, for 2 months, I will be working alongside the current Warwick Terabotics research team to study this imaging system, process data taken from this imaging system and investigate the relationship between regions of skin across the body (as it may hold interesting information with diagnostic potential).</p>
-						<P>There will be a lot of initial learning required and the continual development of my own code to process information, so early progress towards my end project goal may be slow. However, building a comprehensive understanding of the science and writing my own python program to analyse data will be an important skill to cultivate and carry into my 4th year project - in which I will be working in the same department furthering my research.
+						<P>There will be a lot of initial learning required and the continual development of my own code to process information, so early progress towards my end project goal may be slow. However, building a comprehensive understanding of the science and writing my own python program to analyse data will be an important skill to cultivate and carry into my 4th year project - in which I will be working in the same department furthering my research. </p>
+						<p>The image displayed, the Picobot, is the medical imaging robot consisting of a THz scanning probe for imaging (a THz emitter and detector mounted inside the head) and a robot arm which has 6 axis and degrees of freedom! The emitter sends out THz pulses to a quartz window which is placed in (as close to) flush contact with the sample - this is not always possible but ways to improve consistent contact are being researched (air pockets between the sample and quartz causes large occlusions of the THz waves). The emitted waves are reflected at the first and second quartz interfaces, quartz-air inside the probe and quartz-sample at the quartz-sample contact points, and detected by a THz detector. 
 					</div>
 					<div class="image-container">
 						<img src="https://warwick.ac.uk/fac/sci/physics/research/condensedmatt/ultrafastphotonics/emmasthzgroup/vacanies/picobotimg_4691_compressed.jpg" alt="The Picobot ~ a THz imaging device mounted on a robotic arm for precision positioning and stability">
@@ -75,48 +76,64 @@
 
 				<section id="week1">
 					<h3>Week 1: Initial Setup and Literature Review</h3>
-					<p>On my first day, I attended the department meeting where I met the current PhD students I'd be working alongside. They each explained what they were currently working on and their plans for the week/going forward. After this meeting, I was kindly shown around the lab setup, had relevant content explained to me and was sent reading material to review. At this moment, my project goal is not set in stone, but I think I will work on data analysis and image formulation from scan data.</p>
-					<p>I started working on some python code to visualise some data collected. Using the process explained to me by PhD student Ben, I put together some code for taking the detected THz pulse data and isolating the relevant returned information, then analysing that through use of Fourier Transforms.</p>
+					<p>On my first day, I attended the weekly department meeting where I met the current PhD students I'd be working alongside. They each explained what they were currently working on and their plans for the week going forward. After this meeting, I was kindly shown around the lab setup, had relevant content explained to me and was sent reading material to review. At this moment in time, my project goal is not actually set in stone - I have discussed with my supervisor project plans but she also has some ideas in mind for things she'd like researching. I enjoy putting my coding knowledge to good use so I think I will work on data analysis and image formulation from scan data to investigate potential relationships skin optical properties have across varying regions of the body.</p>
+					<p>I started working on some python code to visualise some single-point data collected. There are two types of scans taken by the Picobot: single-point scans which return reflected waveform information at a particular point on a sample, or 2D scans which essentially takes multiple 1D scans across the whole quartz window of the scanning probe - this data can be arranged from scan coordinates across the window to produce a 2D heatmap image depicting properties of a sample.  Using the analysis process explained to me by PhD student Ben, I put together some code for taking the detected THz pulse data and isolating the relevant returned information to plot out frequency-domain properties of the scanned sample such as refractive index and FFTs.</p>
 				</section>
 
 				<section id="week2">
                     <h3>Week 2: Image Reconstruction, Acquisition and Analysis </h3>
-                    <p>This week...</p>
+                    <p>This week, I started to work on code for generating 2D images. This involved a lot of scaling up my code for 1D analysis to iterate the process for approximately 2700 total points! These ~2700 point scans across the quartz window are interpolated to fill an 100*100 grid image with dimensions approximately 22*22mm (the quartz window is a 22mm diametre circle, so some post-interpolation processing is required).</p>
+					<p>I produced images depicting the FFT maximum amplitude (the FFT of the quartz-sample boundary reflection), the reflection peak-to-peak, the phase and the refractive index of the sample. From these, I was able to determine these such characteristic properties of samples like water and skin of the volar forearm.</p>
+					<p>I was able to assist a colleague with some of his research into impedence matching, allowing him to take some images of my volar forearm with a thin layer of paraffin gel applied - like how ultrasounds require the use of a gel to eliminate too-great difference in acoustic impedence between skin and air, the paraffin is intended to harmlessly fill in the air gaps in the top layer of skin.</p>
                 </section>
 
                 <section id="week3">
-                    <h3>Week 3: *Making an app!*</h3>
-                    <p>This week...app development</p>
+                    <h3>Week 3: Making an app!</h3>
+                    <p>After a meeting with my supervisor, I decided to turn my data processing codes, both 1D and 2D, into an application! I turned my focus towards learning how to make a GUI so I could streamline my process of image generation and ultimately aim to make a self-contained .exe that can be used to produce images and plots in a quick, user-friendly way. This would prove useful for not only my research project now but my 4th year (final year) project working in the same field. </p>
+					<p>This took up most of my time and progressed quite quickly. I was now able to upload, by simply dragging-and-dropping, .npz files produced by the Picobot and, in return, produce images and plots showing properties of scanned samples. After running into issues regarding the variablity of file lengths and certain waveform characteristics, I had to keep improving elements of my code which handled how the waveform arrays were indexed for calculations and make the processes more adaptable, enabling the programme to function consistently and make the correct decisions regardless of differences in scan variables such as duration. </p> 
                 </section>
 
                 <section id="week4">
-                    <h3>Week 4:*Still making an app + side work*</h3>
-                    <p>This week...fleshing out the app, adding different file type compatability etc</p>
-                </section>
+                    <h3>Week 4: Further app development + side work</h3>
+                    <p>This week, I continued to flesh out my app, adding in .txt file compatibility after being sent some data files to look at which happened to be in this format.</p>
+					<p>I upgraded my 1D plots to now be interactive, reading out the data values at selected points, interpolating data in between existing data points and being downloadable straight away. This was a big step in improving the usefulness of the app, allowing for greater accuracy and generally speeding up the process of data aquisition for better user-friendly-ness. </p>
+					<p>These changes were also implemented for my 2D images, adding the ability to change interpolation method for image generation in addtion to reading out data at a given point etc. My aim is to add in as many features as possible that I think will be useful for data processing.</p>
+					<p>I presented my current progress in our weekly Monday deparement meeting and my colleague Agrima suggested the ability to click on the 2D image and for a plot of the waveform at that position to be displayed. I implemented this within the next day or so.</p>
+					<p>Along with my app development, I also looked into how well picobot images are able to define boundaries between 2 sharply contrasting regions, as this is an important detail to be aware of if these images were to be used to determine skin legion boundaries for example. I was able to determine from the gradient of values across the boundary between two very differing sample materials, metal foil and air, where one material truely ended and one began. This boundary was on average blurred over a width of approximatey 3.78mm (averaging over 4 different image types).
+				</section>
 
                 <section id="week5">
                     <h3>Week 5:*Side work + collecting scan data*</h3>
-                    <p>This week...occlusion stuff, agrima resolution project  </p>
+                    <p>While continuing to work on my app, my supervisor asked me to look into some maths behind the sampling frequency of waveform pulses emitted. I started to look into how much you could reduce the sampling frequency, currently around 4 pulses per second, and still obtain the same characteristic data seen in the early moments of a scan where changes happen in the skin due to undergoing compression now in contact with the probe quartz window.</p>
+					<p>I compared the data produced at different sampling frequencies, determined the errors introduced by less frequent pulses and trialed interpolation methods to try and preserve/recover as much data as possible.</p>
+					<p>My colleague Agrima asked me to assist her on some research into a similarly inclined project - taking images at lower resolutions to then see if they can be artifically upscaled. Lower resolution scans take far less time to complete as less total points are measured to then be interpolated into an image grid. Less points going into a 100*100 grid, as I previously discussed, mean that more inaccuracies will be introduced by the interpolation process to fill out the grid points. We took scans of a credit card chip and a hand scar at 2 different resolutions to then contrast and compare the image produced to see if key information was preserved or could be recovered from the lower resolution image.</p>
+					<p>My own investigation into this struggled to get the same information out of both resolution images eg. determining the length of the hand scar was possible from the higher resolution image but not from the lower resolution image. However, the images of the credit card chip proved more promising, likely due to the large contrasts in material from metal to plastic as opposed to skin and new scar tissue.</p>
+					<p>I started to analyse some old scan data taken at varying points across the body - forehead, cheek, finger and volar forearm. My goal is to build up my own small database of scans to complement these pre-existing scans and then try to establish some relationships in the data.
                 </section>
 
                 <section id="week6">
                     <h3>Week 6: *Collecting sample scans*</h3>
-                    <p>This week...collecting some scans of skin regions + Agrima resolution work</p>
+                    <p>I started to collect some scans of myself and Ben. We took the scans at 2 resolutions so that the data could also be useful for that project too.</p>
+					<p>
+					This week...collecting some scans of skin regions + Agrima resolution work</p>
                 </section>
 
                 <section id="week7">
                     <h3>Week 7: *Processing scan data*</h3>
-                    <p>This week...</p>
+                    <p>This week...I got COVID and couldn't go into work all week. This obviously sucked and meant I couldn't collect any more scan data to put towards my analysis project.</p>
+					<p>I tried to do what work I could. This included writing up some of my progress, adding an 'average selected region' function to my app to take data sections of images, and updating my blog!</p>
+					<p>I have until mid October to submit my final URSS work, which I think I will submit in the form of a poster documenting my work - I have come to realise that a lot of my time has been taken up by side projects, doing bits of work towards other peoples research and my app, and I haven't put enough time into collecting my own data for analysis. My usage of the Picobot to collect data is restricted as I am new, only recently trained on the system and need a supervisor to oversee my work. In addition to this, the robot does disappear off to be tinkered on in the Engineering department from time to time so is sometimes unavailable.</p>
+					<p>Having come down rather sick with COVID at a very unfortunate time in my project, I know that this will largely impact my final outcome as my work depends on having sample data collected - and I can't do so! I will have to try and get some scans done in my final week which I can then work through after I 'finish my project'.
                 </section>
 				
 				<section id="week8">
                     <h3>Week 8: *Final stint*</h3>
-                    <p>This week...</p>
+                    <p>Coming soon...</p>
                 </section>
 				
 				<section id="conclusion">
                     <h3>Conclusion</h3>
-                    <p>Something interesting I hope</p>
+                    <p>Coming soon...</p>
                 </section>
 				
             </section>
