@@ -39,8 +39,7 @@
 						<p>The image displayed, the Picobot, is the medical imaging robot consisting of a THz scanning probe for imaging (a THz emitter and detector mounted inside the head) and a robot arm which has 6 axis and degrees of freedom! The emitter sends out THz pulses to a quartz window which is placed in (as close to) flush contact with the sample - this is not always possible but ways to improve consistent contact are being researched (air pockets between the sample and quartz causes large occlusions of the THz waves). The emitted waves are reflected at the first and second quartz interfaces, quartz-air inside the probe and quartz-sample at the quartz-sample contact points, and detected by a THz detector. 
 					</div>
 					<div class="image-container">
-						<img src="https://warwick.ac.uk/fac/sci/physics/research/condensedmatt/ultrafastphotonics/emmasthzgroup/vacanies/picobotimg_4691_compressed.jpg" alt="The Picobot ~ a THz imaging device mounted on a robotic arm for precision positioning and stability">
-						<figcaption>The Picobot ~ a THz imaging device mounted on a robotic arm for precision positioning and stability.</figcaption>
+						<img src="picobot_im.jpg" alt="The Picobot ~ a THz imaging device mounted on a robotic arm for precision positioning and stability">
 					</div>
 				</div>
 				<!-- FLEX CONTAINER END -->
@@ -49,11 +48,19 @@
 			<hr>
 
 			<section id="me">
-				<h2>Introducing myself:</h2>
-				<p>I am a 21 year old from Leicester currently studying for an Integrated Masters in Mathematics and Physics (MMathPhys) at the University of Warwick.</p>
-				<p>I spent most of my childhood heavily involved in music, getting my grade 8 in Trumpet and grade 5 in Piano by age 14 as well as teaching myself to play multiple other brass and woodwind instruments such as alto and tenor saxophone. I was in an orchestra, brass group and jazz band and performed in many concerts, theatre productions and charity fundraisers through my music association.</p>
-				<p>I am very enthusiastic about staying active, having taken up karate in my early teens and developed a passion for the gym at 16.</p>
-				<p>I come from a very academic family – 2 of my grandparents were teachers, both my parents studied Law with French at Leeds Poly in the 80s. My sister is currently undertaking a PhD at UoL in Engineering working in the field of material science, particularly nanoplating.</p>
+				<div class="project-section">
+					<div class="text-content">
+						<h2>Introducing myself:</h2>
+						<p>I am a 21 year old from Leicester currently studying for an Integrated Masters in Mathematics and Physics (MMathPhys) at the University of Warwick.</p>
+						<p>I spent most of my childhood heavily involved in music, getting my grade 8 in Trumpet and grade 5 in Piano by age 14 as well as teaching myself to play multiple other brass and woodwind instruments such as alto and tenor saxophone. I was in an orchestra, brass group and jazz band and performed in many concerts, theatre productions and charity fundraisers through my music association.</p>
+						<p>I am very enthusiastic about staying active, having taken up karate in my early teens and developed a passion for the gym at 16.</p>
+						<p>I come from a very academic family – 2 of my grandparents were teachers, both my parents studied Law with French at Leeds Poly in the 80s. My sister is currently undertaking a PhD at UoL in Engineering working in the field of material science, particularly nanoplating.</p>
+						<p>I am slowly but surely learning Mandarin to better communicate with my girlfriend's family, and have actually been to Inner Mongolia (and traveled a little to Beijing and Datong) with them for 3 weeks.
+					</div>
+					<div class="image-container">
+								<img src="joe_im2.jpg" alt="Me!" >
+					</div>
+				</div>
 			</section>
 		
 			<hr>
@@ -107,9 +114,9 @@
 				</section>
 
                 <section id="week5">
+					<h3>Week 5: Taking some scans + side tasks</h3>
 					<div class="project-section">
 						<div class="text-content">
-							<h3>Week 5: Taking some scans + side tasks</h3>
 							<p>While continuing to work on my app, my supervisor asked me to look into some maths behind the sampling frequency of waveform pulses emitted. I started to look into how much you could reduce the sampling frequency, currently around 4 pulses per second, and still obtain the same characteristic data seen in the early moments of a scan where changes happen in the skin due to undergoing compression now in contact with the probe quartz window.</p>
 							<p>I compared the data produced at different sampling frequencies, determined the errors introduced by less frequent pulses and trialed interpolation methods to try and preserve/recover as much data as possible.</p>
 							<p>My colleague Agrima asked me to assist her on some research into a similarly inclined project - taking images at lower resolutions to then see if they can be artifically upscaled. Lower resolution scans take far less time to complete as less total points are measured to then be interpolated into an image grid. Less points going into a 100*100 grid, as I previously discussed, mean that more inaccuracies will be introduced by the interpolation process to fill out the grid points. We took scans of a credit card chip and a hand scar at 2 different resolutions to then contrast and compare the image produced to see if key information was preserved or could be recovered from the lower resolution image.</p>
@@ -130,9 +137,9 @@
                 </section>
 
                 <section id="week7">
-                    <h3>Week 7: I got COVID :( </h3>
-                    <p>This week... I got COVID while staying at my girlfriend's house! I therefore couldn't go into work - members of the department were set to go to a conference in Helsinki shortly so I wanted to minimise the risk of getting them sick too. </p>
-					<p>This sucked as, alongside falling quite ill, it meant I couldn't collect any more scan data to put towards my analysis project.</p>
+                    <h3>Week 7: I caught COVID </h3>
+                    <p>This week... I got COVID while visiting at my girlfriend! I therefore couldn't go into work - members of the department were set to go to a conference in Helsinki shortly so I had to minimise the risk of getting them sick too. </p>
+					<p>This was very unfortunate as, alongside falling quite ill, it meant I couldn't collect any more scan data to put towards my analysis project.</p>
 					<p>I tried to do what work I could. This included writing up some of my progress, adding an 'average selected region' function to my app to take data from selected areas of images, and updating my blog!</p>
 					<p>I have until mid October to submit my final project documentation, which I think I will submit in the form of a poster - I have come to realise that a lot of my time has been taken up by side projects (still valid and interesting research doing bits of work towards other peoples projects) and my app, and I haven't put enough time into collecting my own data for analysis. I planned to start taking my scans from week 5-6, but personal issues and time constraints got in the way. My usage of the Picobot to collect data is restricted as I am new, only recently trained on the system and need a supervisor to oversee my work. In addition to this, the robot does disappear off to be tinkered on in the Engineering department from time to time so is sometimes unavailable.</p>
 					<p>Having come down rather sick with COVID at a very unfortunate time in my project, I know that this will largely impact my final outcome as my work depends on having sample data collected - and I can't do so! I will have to try and get some scans done in my final week which I can then work through after I 'finish my project'.
@@ -141,18 +148,19 @@
 				<section id="week8">
                     <h3>Week 8: Staying positive - in all regards </h3>
                     <p>I remained out of office as I was still testing positive for COVID. </p>
-					<p>Later in the week, I finally tested negative.
+					<p>Later in the week, I finally tested negative but still am suffering from fatigue and dizzy spells unfortunately.</p>
+					<p>I will be continuing my project for a week or two after recovering from COVID due to this time lost.</p>
                 </section>
 				
 				<section id="week9">
                     <h3>Week 9: Department goes international!</h3>
-                    <p>This week, the majority of the department I've been working alongside went to a conference in Helsinki to present research etc. This meant I had no reason to go into the office in person, so I remained at home.</p>
-					<p>Having taken 2-3 weeks off now due to either sickness or colleagues being away, I now need to focus on drawning conclusions from my work. I still need to collect some additional data to analyse, but I am faced with the problem of not having many people around to scan. I think I will have to continue this research into year 4 when students will be back on campus who I then can ask to participate.</p>
+                    <p>This week, the majority of the department I've been working alongside went to a conference in Helsinki to present research etc. This meant I had no reason to go into the office in person, as to collect data I need supervision, so I remained at home.</p>
+					<p>Having taken 2-3 weeks off now due to either sickness and my colleagues also being away, I now need to focus on drawning conclusions from my work and compiling it for my URSS poster. I still need to collect some additional data to analyse, but I am faced with the problem of not having many people around to scan. I think I will have to continue this research into year 4 when students will be back on campus who I then can ask to participate.</p>
 				</section>
 				
 				<section id="week10">
                     <h3>Week 10: Back in office</h3>
-                    <p>Coming soon...</p>
+                    <p>I had a meeting with my supervisor in which we spoke about something I could work on for the last week and a half of my project, having had some time off.</p>
                 </section>
 				
 				<section id="week11">
