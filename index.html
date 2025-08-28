@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Your research project blog">
         <title>Summer Research Project Blog</title>
-        <link rel="stylesheet" href="styless.css"> <!-- Linking the CSS file -->
+        <link rel="stylesheet" href="styless.css"> 
         <style>
             /* Smooth scroll behavior */
             html {
@@ -22,6 +22,7 @@
                     <li><a href="#about">| About the Project |</a></li>
 					<li><a href="#me">| Introducing Myself |</a></li>
                     <li><a href="#research">| Weekly Installments |</a></li>
+					<li><a href="#app">| My App |</a></li>
                     <li><a href="#contact">| Contact |</a></li>
                 </ul>
             </nav>
@@ -29,12 +30,11 @@
 
         <main>
 			<section id="about">
-				<!-- FLEX CONTAINER START -->
 				<div class="project-section">
 					<div class="text-content">
 						<h2>About the Project:</h2>
 						<p>Hi! I'm Joseph, a Mathematics and Physics undergraduate at the University of Warwick. I am very passionate about the field of Medical Physics and am very lucky to have landed an Undergraduate Research Support Scheme (URSS) project researching and experimenting with an up-and-coming medical imaging technique!</p> 
-						<p>This summer, for 2 months, I will be working alongside the current Warwick Terabotics research team to study this imaging system, process data taken from this imaging system and investigate the relationship between regions of skin across the body (as it may hold interesting information with diagnostic potential).</p>
+						<p>This summer, for 2 months, I will be working alongside the current Warwick Terabotics research team studying this medical imaging system, processing data taken using the Picobot (see image) and investigating some interesting ideas - such as the relationship between regions of skin across the body (as it may hold interesting information with diagnostic potential).</p>
 						<P>There will be a lot of initial learning required and the continual development of my own code to process information, so early progress towards my end project goal may be slow. However, building a comprehensive understanding of the science and writing my own python program to analyse data will be an important skill to cultivate and carry into my 4th year project - in which I will be working in the same department furthering my research. </p>
 						<p>The image displayed, the Picobot, is the medical imaging robot consisting of a THz scanning probe for imaging (a THz emitter and detector mounted inside the head) and a robot arm which has 6 axis and degrees of freedom! The emitter sends out THz pulses to a quartz window which is placed in (as close to) flush contact with the sample - this is not always possible but ways to improve consistent contact are being researched (air pockets between the sample and quartz causes large occlusions of the THz waves). The emitted waves are reflected at the first and second quartz interfaces, quartz-air inside the probe and quartz-sample at the quartz-sample contact points, and detected by a THz detector. 
 					</div>
@@ -42,7 +42,6 @@
 						<img src="picobot_im.jpg" alt="The Picobot ~ a THz imaging device mounted on a robotic arm for precision positioning and stability">
 					</div>
 				</div>
-				<!-- FLEX CONTAINER END -->
 			</section>
 
 			<hr>
@@ -64,6 +63,7 @@
 			</section>
 		
 			<hr>
+			
 
 			<section id="research">
 				<h2>Weekly Installments:</h2>
@@ -124,7 +124,7 @@
 							<p>I started to analyse some old scan data taken at varying points across the body - forehead, cheek, finger and volar forearm. My goal is to build up my own small database of scans to complement these pre-existing scans and then try to establish some relationships in the data.
 						</div>	
 						<div class="image-container">
-								<img src="creditcard_im.png" alt="An image processed by my app of a credit card chip" style="width: 500px; height: auto;">
+								<img src="creditcard_im.png" alt="An image processed by my app of a credit card chip" style="width: 400px; height: auto;">
 								<figcaption>An image processed by my app of a credit card chip.</figcaption>
 						</div>
 					</div>
@@ -132,17 +132,17 @@
 
                 <section id="week6">
                     <h3>Week 6: Collecting sample scans - slow progress week</h3>
-                    <p>I started to collect some scans of myself and Ben. We took the scans at 2 resolutions so that the data could also be useful for that project too.</p>
-					<p>This week, I had to move my belongings out of my uni student house as we were at the end of our contract. This kept me quite busy, cleaning and packing and driving, and meant I didn't complete too much work in the second half of the week. Mostly just some minor bug fixes for my app and some work towards the sample frequency investigation. </p>
+                    <p>I started to collect some scans of myself and Ben in 2 different spots, the temple and the cheek. We took the scans at 2 resolutions so that the data could also be useful for that project too.</p>
+					<p>This week, I had to move my belongings out of my uni student house as we had reached the end of our tenancy contract. This kept me quite busy, cleaning and packing and driving, and meant I didn't complete too much work in the second half of the week. Mostly just some minor bug fixes for my app and some work towards the sample frequency investigation. </p>
                 </section>
 
                 <section id="week7">
                     <h3>Week 7: I caught COVID </h3>
-                    <p>This week... I got COVID while visiting at my girlfriend! I therefore couldn't go into work - members of the department were set to go to a conference in Helsinki shortly so I had to minimise the risk of getting them sick too. </p>
+                    <p>This week... I caught COVID while visiting at my girlfriend! I therefore couldn't go into work - members of the department were set to go to a conference in Helsinki shortly so I had to minimise the risk of getting them sick too. </p>
 					<p>This was very unfortunate as, alongside falling quite ill, it meant I couldn't collect any more scan data to put towards my analysis project.</p>
 					<p>I tried to do what work I could. This included writing up some of my progress, adding an 'average selected region' function to my app to take data from selected areas of images, and updating my blog!</p>
-					<p>I have until mid October to submit my final project documentation, which I think I will submit in the form of a poster - I have come to realise that a lot of my time has been taken up by side projects (still valid and interesting research doing bits of work towards other peoples projects) and my app, and I haven't put enough time into collecting my own data for analysis. I planned to start taking my scans from week 5-6, but personal issues and time constraints got in the way. My usage of the Picobot to collect data is restricted as I am new, only recently trained on the system and need a supervisor to oversee my work. In addition to this, the robot does disappear off to be tinkered on in the Engineering department from time to time so is sometimes unavailable.</p>
-					<p>Having come down rather sick with COVID at a very unfortunate time in my project, I know that this will largely impact my final outcome as my work depends on having sample data collected - and I can't do so! I will have to try and get some scans done in my final week which I can then work through after I 'finish my project'.
+					<p>I have until mid October to submit my final project documentation, which I am planning to submit in the form of a poster - I have come to realise that a lot of my time has gone towards side projects (still valid and interesting research experience) and my app, and I haven't been able to allocate enough time for collecting my own data for analysis. I planned to start taking my scans from week 5-6, but personal issues and time constraints got in the way. My usage of the Picobot to collect data is restricted as I am new, only recently trained on the system and need a supervisor to oversee my work. In addition to this, the robot does disappear off to be tinkered on in the Engineering department from time to time so is sometimes unavailable.</p>
+					<p>Having come down rather sick with COVID at a very unfortunate time, I know that this will have a large impact what I had intended to be my main point of research to be as it depends heavily on having a lot of sample data collected - and I can't do so! I will have to try and get some scans done in my final week which I can then work through after my time in the department comes to an end.
                 </section>
 				
 				<section id="week8">
@@ -172,8 +172,36 @@
                     <h3>Conclusion</h3>
                     <p>Coming soon...</p>
                 </section>
+			</section>
+			
+			<hr>
 				
-            </section>
+			<section id="app">
+				<h2>My app:</h2>
+				<div class="project-section">
+					<div class="text-content">
+						<p>I have been working on making an app for processing the data collected by the Picobot. This data can take multiple forms, so my app needs to be able to accommodate this and be multifunctional.</p>
+						<p>The Picobot takes either 1D point scans, or 2D image scans. These are either .npz files or .txt files (only for 1D scans), so I included an option to select a file type. Selection of a file type will then change which files are prompted to be imported, and which processing types are available (1D Point Analysis or 2D Image View).</p>
+						<p>I have included the ability to import a time and a reference file - this is because some of the sample files I have worked with did not include their own time arrays or reference waveform data, so I had to add them in externally. For sample files which contain all the required data, the app will run on just the sample file alone. But if the required time or reference arrays are not included, you will be prompted to import the additional files.</p>
+						<p>The 1D Point Analysis generates plots depicting properties such as the refractive index of a sample. The 2D image generation produces heatmap-style images showing properties such as the refractive index, max FFT amplitude, and the peak-to-peak of the sample reflected waveform.
+						<br>
+						<p>I have added some analysis tools to the 2D Image View:</p>
+						<ul>
+						  <li>A slideable circular cropping filter to remove the incorrect interpolated data outside of the actual scanned window data.</li>
+						  <li>An averaging tool to select an image region and extrapolate the average of data values over an area.</li>
+						  <li>Interactive plots - zoom in and out, download the image, hover to show the coordinate and its value.</li>
+						  <li>Click on a point to display a plot of the waveform measured at that location.</li>
+						</ul>
+						<br>
+						<p>My 4th year project is also in this field of study, so this app will hopefully prove itself very useful for my future work.</p>
+				</div>
+					<div class="image-container">
+						<img src="app_screenshot.png" alt="First image" style="width:500px; display:inline-block;">
+						<img src="app_demo.png" alt="Second image" style="width:500px; display:inline-block;">
+
+					</div>
+				</div>
+			</section>
 			
         </main>
 
